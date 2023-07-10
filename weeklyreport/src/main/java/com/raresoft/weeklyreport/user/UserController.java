@@ -30,7 +30,7 @@ public class UserController {
 	  }
 
 	@GetMapping("/login")
-	public String loginPage() throws Exception { // 로그인 되지 않은 상태면 login 페이지를, 로그인 된 상태면 home 페이지
+	public String loginPage() throws Exception { // 로그인 되지 않은 상태면 login 페이지를, 로그인 상태면 home 페이지
 		try {
 			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		

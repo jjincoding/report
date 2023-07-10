@@ -4,7 +4,7 @@ public class ReportRequest {
 
 	private String userId; //
 	private String userName; //
-	private String listTitle; //
+	private String listTitle;
 	
 	public String getUserId() {
 		return userId;

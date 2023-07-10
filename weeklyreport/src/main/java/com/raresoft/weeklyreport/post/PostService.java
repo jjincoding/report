@@ -35,7 +35,6 @@ public class PostService {
      * @return PK
      */
     @Transactional
-    // 메서드 정상 종료 여부에 따라 Commit 또는 Rollback
     public int savePost(final ProjectVo params) {
     	postMapper.save(params);
     	return params.getListId();

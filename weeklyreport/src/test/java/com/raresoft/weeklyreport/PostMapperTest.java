@@ -42,7 +42,7 @@ public class PostMapperTest {
 		} catch (JsonProcessingException e) {
 			throw new RuntimeException(e);
 		}
-		// ==> listId로 찾았을 때 결과가 하나만 나와야 하는데 지금 listId 0인 행이 4개 => 오류 발생
+		// ==> listId로 찾았을 때 결과가 하나만 나와야 하는데 지금 listId 0인 행이 4개 오류 발생
 	}
 
 	/*

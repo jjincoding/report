@@ -28,7 +28,7 @@ public interface PostMapper {
 	 * 그럼 프로젝트 관련 정보를 저장하려면
 	 * report_list 테이블에 넣는건지
 	 * project 테이블에 넣는건지
-	 * 그리고 테이블에 auto_increment 속성 id 줘야하는지 ?
+	 * 그리고 테이블에 auto_increment 속성 id 줘야하는지
 	*/
 	
 	/*

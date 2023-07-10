@@ -7,7 +7,7 @@ public class PostRequest {
 	private String proNextWeek; //
 	private Short proProgress; //
 	private int listId; //
-	private Short cateCode; //
+	private Short cateCode;
 	
 	public String getProName() {
 		return proName;

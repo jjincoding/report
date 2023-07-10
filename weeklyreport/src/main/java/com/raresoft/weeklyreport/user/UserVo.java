@@ -10,7 +10,7 @@ public class UserVo {
 	private String userName; //
 	private String userPwd; //
 	private Short teamCode; //
-	private String roleCode; //
+	private String roleCode; 
 	
 	private Collection<? extends GrantedAuthority> authorities;
 	

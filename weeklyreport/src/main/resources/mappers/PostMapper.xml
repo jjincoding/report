@@ -88,6 +88,7 @@
 		<collection property="projectVo" resultMap="ProjectVo" /> 
 	</resultMap>
 	
+	<!--  -->
 	<select id="selectId" parameterType="com.raresoft.weeklyreport.post.ReportListVo" resultMap="com.raresoft.weeklyreport.post.ReportListVo">
 		SELECT
 			a.list_id,

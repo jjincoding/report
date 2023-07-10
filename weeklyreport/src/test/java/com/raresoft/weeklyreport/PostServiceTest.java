@@ -21,7 +21,7 @@ public class PostServiceTest {
 		params.setListTitle("테스트 제목");
 		params.setUserId("테스트 아이디");
 		params.setUserName("테스트 작성자");
-		int listId = postService.savePost(params); //
+		int listId = postService.savePost(params);
 		System.out.println("생성된 글 ID : " + listId);
 	}
 	*/

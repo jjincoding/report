@@ -21,7 +21,7 @@
 			id = #{id}
 	</select>
 	
-	<!-- 사용자 회원가입 -->
+	<!-- 회원가입 -->
 	<insert id="insertUser">
 		INSERT INTO user
 			(user_id, user_name, user_pwd)

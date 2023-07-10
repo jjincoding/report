@@ -9,7 +9,7 @@ public class ReportResponse {
 	private String userName; //
 	private String listTitle; //
 	private LocalDateTime regDate; //
-	private LocalDateTime updDate; //
+	private LocalDateTime updDate;
 	
 	public int getListId() {
 		return listId;

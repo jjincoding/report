@@ -7,7 +7,7 @@ public class ProjectResponse {
 	private String proThisWeek; //
 	private String proNextWeek; //
 	private Short proProgress; //
-	private Short cateCode; //
+	private Short cateCode;
 	
 	public int getListId() {
 		return listId;

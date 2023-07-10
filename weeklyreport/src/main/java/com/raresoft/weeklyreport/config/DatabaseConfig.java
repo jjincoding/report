@@ -17,7 +17,7 @@ import com.zaxxer.hikari.HikariDataSource;
 /*
  * DataSource : DB와의 커넥션을 관리해주는 인터페이스
  * application.properties에 DB 정보를 선언해두고,
- * 설정(Configuration) 파일에서 참조
+ * 설정(Configuration) 파일에서 참조하는 방법
  */
 
 @Configuration
