@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout/basic">
+    <th:block layout:fragment="title">
+    	<title>작성 페이지</title>
+    </th:block>
+    
+    <th:block layout:fragment="content">
+    	<div class="page_tits">
+    		<h3>글 관리</h3>
+    		<p class="path"><strong>현재 위치 : </strong><span>글 관리</span><span>1</span><span>글 작성</span></p>
+    	</div>
+    	<div class="content">
+    		<section>
+    			<form id="saveForm" method="post" autocomplete="off">
+    			<table class="tb tb_row">
+    				<colgroup>
+    					<col style="width:15%;" /><col style="width:35%;" /><col style="width:15%;" /><col style="width:35%;" />
+    				</colgroup>
+    				<tbody>
+    					<tr>
+    						<th>프로젝트명<span class="es">필수 입력</span></th>
+    						<td colspan="3"><input type="text" id="listTitle" name="listTitle" maxlength="50" placeholder="제목을 입력해 주세요." /></td>
+    					</tr>
+    	
+    					<tr>
+    						<th>금주<span class="es">필수 입력</span></th>
+    						<td colspan="3"><textarea id="proThisWeek" name="proThisWeek" cols="50" rows="10" placeholder="금주 업무내용을 입력해 주세요."></textarea></td>
+    					</tr>
+    					
+    					<tr>
+    						<th>차주</th>
+    						<td colspan="3"><textarea id="proNextWeek" name="proNextWeek" cols="50" rows="10" placeholder="차주 업무내용을 입력해 주세요."></textarea></td>
+    					</tr>
+    				</tbody>
+    			</table>
+    		</form> 
+    		<p class="btn_set">
+    			<button type="button" id="saveBtn" onClick="savePost();" class="btnsbtn_st3 btn_mid">제출</button>
+    			<button type="button" id="plusBtn" onClick="" class="btnsbtn_st3 btn_mid">프로젝트 추가</button>
+    			<a th:href="@{/post/list.do}" class="btns btn_bdr3 btn_mid">뒤로</a></p>
+    		</section>
+    	</div>
+    </th:block>
+</html>

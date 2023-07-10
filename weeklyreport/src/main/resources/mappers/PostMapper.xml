@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.raresoft.weeklyreport.post.PostMapper">
+	
+	<!-- report_list 테이블 전체 컬럼 -->
+	<sql id="listColumns">
+		list_id
+		, user_id
+		, user_name
+		, list_title
+		, reg_date
+		, upd_date
+	</sql>
+	
+	<!-- project 테이블 전체 컬럼 -->
+	<sql id="proColumns">
+		list_id
+		, pro_name
+		, pro_this_week
+		, pro_next_week
+		, pro_progress
+		, cate_code
+	</sql>
+
+	<insert id="save" parameterType="com.raresoft.weeklyreport.post.ProjectVo">
+		INSERT INTO project (
+			<include refid="proColumns" />
+		) VALUES (
+			#{listId}
+			, #{proName}
+			, #{proThisWeek}
+			, #{proNextWeek}
+			, #{proProgress}
+			, #{cateCode}
+			)
+		)
+	</insert>
+	
+	<!-- 상세 정보 조회 -->
+	<select id="findById" parameterType="int" resultType="com.raresoft.weeklyreport.post.PostResponse">
+		SELECT
+			<include refid="postColumns" />
+		FROM
+			report_list a
+				INNER JOIN project b
+				ON a.list_id = b.list_id
+		WHERE
+			list_id = #{value}
+	</select>
+	
+	<!-- 수정 -->
+	<update id="update" parameterType="com.raresoft.weeklyreport.post.PostRequest">
+		UPDATE report_list
+		SET
+			upd_date = NOW()
+			, list_title = #{listTitle}
+		WHERE
+			list_id = #{listId}
+	</update>
+	
+	<!-- 리스트 조회 -->
+	<select id="findAll" resultType="com.raresoft.weeklyreport.post.PostResponse">
+		SELECT
+			<include refid="listColumns" />
+		FROM
+			report_list
+		ORDER BY
+			reg_date DESC
+	</select>
+	
+	<!-- 
+	글 조회 JOIN -->
+	<resultMap type="com.raresoft.weeklyreport.post.ProjectVo" id="ProjectVo">
+		<result column="list_id" property="listId" />
+		<result column="pro_name" property="proName" />
+		<result column="pro_this_week" property="proThisWeek" />
+		<result column="pro_next_week" property="proNextWeek" />
+		<result column="pro_progress" property="proProgress" />
+		<result column="cate_code" property="cateCode" />
+	</resultMap> 
+	
+	<resultMap type="com.raresoft.weeklyreport.post.ReportListVo" id="ReportListVo">
+		<result column="list_id" property="listId" />
+		<result column="user_id" property="userId" />
+		<result column="user_name" property="userName" />
+		<result column="list_title" property="listTitle" />
+		<result column="reg_date" property="regDate" />
+		<result column="upd_date" property="updDate" />
+		<collection property="projectVo" resultMap="ProjectVo" /> 
+	</resultMap>
+	
+	<select id="selectId" parameterType="com.raresoft.weeklyreport.post.ReportListVo" resultMap="com.raresoft.weeklyreport.post.ReportListVo">
+		SELECT
+			a.list_id,
+			a.user_id,
+			a.user_name,
+			a.list_title,
+			a.reg_date,
+			a.upd_date,
+			b.pro_name,
+			b.pro_this_week,
+			b.pro_next_week,
+			b.pro_progress,
+			b.cate_code
+		FROM
+			report_list a
+		LEFT JOIN
+			project b
+		ON
+			a.list_id = b.list_id
+		WHERE
+			a.list_id = #{listId}
+	</select>
+</mapper>
