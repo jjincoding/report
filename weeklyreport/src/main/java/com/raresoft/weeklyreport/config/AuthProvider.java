@@ -43,7 +43,7 @@ public class AuthProvider implements AuthenticationProvider {
 	}
 	
 	@Override
-	public boolean supports(Class<?> authentication) {
+	public boolean supports(Class<?> authentication) { // supports 메서드
 		return true;
 	}
 }

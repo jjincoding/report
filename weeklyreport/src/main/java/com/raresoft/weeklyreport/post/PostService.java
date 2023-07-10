@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 // PostMapper 인터페이스의 @Mapper
-// 해당 클래스가 비즈니스 로직을 담당하는 Service Layer의 클래스라는 의미
+// 해당 클래스가 비즈니스 로직을 담당하는 Service Layer의 클래스
 public class PostService {
 	
 	private final PostMapper postMapper;

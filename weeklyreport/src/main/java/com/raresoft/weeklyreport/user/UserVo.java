@@ -5,12 +5,12 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 
 public class UserVo {
-	private Long id;
-	private String userId;
-	private String userName;
-	private String userPwd;
-	private Short teamCode;
-	private String roleCode;
+	private Long id; //
+	private String userId; //
+	private String userName; //
+	private String userPwd; //
+	private Short teamCode; //
+	private String roleCode; //
 	
 	private Collection<? extends GrantedAuthority> authorities;
 	

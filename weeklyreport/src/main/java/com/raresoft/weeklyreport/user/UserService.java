@@ -24,7 +24,7 @@ public class UserService {
 	
 	public void signup(UserVo userVo) { // 회원가입
 		if (!userVo.getUserName().equals("") && !userVo.getUserId().equals("")) {
-			// password는 암호화해서 DB에 저장
+			// password는 암호화해서 DB 저장
 			userVo.setUserPwd(passwordEncoder.encode(userVo.getUserPwd()));
 			userMapper.insertUser(userVo);
 		}

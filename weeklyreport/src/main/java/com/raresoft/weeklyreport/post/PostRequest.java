@@ -2,12 +2,12 @@ package com.raresoft.weeklyreport.post;
 
 public class PostRequest {
 
-	private String proName;
-	private String proThisWeek;
-	private String proNextWeek;
-	private Short proProgress;
-	private int listId;
-	private Short cateCode;
+	private String proName; //
+	private String proThisWeek; //
+	private String proNextWeek; //
+	private Short proProgress; //
+	private int listId; //
+	private Short cateCode; //
 	
 	public String getProName() {
 		return proName;

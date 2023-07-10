@@ -3,12 +3,12 @@ package com.raresoft.weeklyreport.post;
 import java.time.LocalDateTime;
 
 public class ReportListVo {
-	private int listId;
-	private String userId;
-	private String userName;
-	private String listTitle;
-	private LocalDateTime regDate;
-	private LocalDateTime updDate;
+	private int listId; //
+	private String userId; //
+	private String userName; //
+	private String listTitle; //
+	private LocalDateTime regDate; //
+	private LocalDateTime updDate; //
 	
 	public int getListId() {
 		return listId;

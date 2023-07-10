@@ -55,6 +55,5 @@ class WeeklyreportApplicationTests {
     /*
      * 테스트 코드 모두 SqlSesionFactory 타입의 객체
      * 컨테이너에서 빈을 주입하는 방식
-     * 
      */
 }

@@ -19,7 +19,7 @@ public class SecurityConfig {
 		
 	// login 설정
 		http
-			.formLogin() // Form 로그인 인증 기능이 작동함
+			.formLogin() // Form 로그인 인증 기능이 작동
 			// .loginPage("/login") // GET 요청 (login form을 보여줌) // 사용자 정의 로그인 페이지
 			.loginProcessingUrl("/auth") // POST 요청 (login 창에 입력한 데이터 처리)
 			.usernameParameter("userId") // login에 필요한 id 값을 userId로 설정 (default는 username)

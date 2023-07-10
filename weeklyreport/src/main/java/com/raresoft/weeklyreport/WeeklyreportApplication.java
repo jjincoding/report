@@ -2,7 +2,6 @@ package com.raresoft.weeklyreport;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 // main 메소드를 가진 실행 파일
 

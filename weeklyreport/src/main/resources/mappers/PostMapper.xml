@@ -68,8 +68,7 @@
 			reg_date DESC
 	</select>
 	
-	<!-- 
-	글 조회 JOIN -->
+	<!-- 글 조회 JOIN -->
 	<resultMap type="com.raresoft.weeklyreport.post.ProjectVo" id="ProjectVo">
 		<result column="list_id" property="listId" />
 		<result column="pro_name" property="proName" />
